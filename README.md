@@ -3,8 +3,8 @@
 Insecticide is a tool suite for [Redis](https://redis.io/) profiling. It finds ambiguous values in your redis configuration.
 
 ## Quickstart
-1. [Install Insecticide](docs/install.md)
-2. [Using Insecticide](docs/usage.md)
+1. [Installation](https://github.com/lartie/insecticide/wiki/Installation)
+2. [Usage](https://github.com/lartie/insecticide/wiki/Usage)
 
 ## Features
 * Profiling redis configuration
