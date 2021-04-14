@@ -1,0 +1,133 @@
+{
+  "6": {
+    "timeout": [
+      {
+        "index": 0,
+        "value": "0",
+        "info": {
+          "advice": "Set timeout",
+          "reason": "If timeout is 0, clients connections won't be closed. They will be in idle status.",
+          "level": "warning"
+        },
+        "condition": "eq"
+      }
+    ],
+    "loglevel": [
+      {
+        "index": 0,
+        "value": "debug",
+        "info": {
+          "advice": "In production use a less aggressive logging policy (notice or warning)",
+          "reason": "A lot of information, useful for development/testing. Don't use this log level in production.",
+          "level": "critical"
+        },
+        "condition": "eq"
+      },
+      {
+        "index": 0,
+        "value": "verbose",
+        "info": {
+          "advice": "In production use a less aggressive logging policy (notice or warning)",
+          "reason": "Many rarely useful info, but not a mess like the debug level",
+          "level": "warning"
+        },
+        "condition": "eq"
+      },
+      {
+        "index": 0,
+        "value": "warning",
+        "info": {
+          "advice": "moderately verbose, what you want in production probably",
+          "reason": "Only very important / critical messages are logged",
+          "level": "warning"
+        },
+        "condition": "eq"
+      }
+    ],
+    "requirepass": [
+      {
+        "index": 0,
+        "value": "",
+        "required": true,
+        "info": {
+          "advice": "You have to set user and password",
+          "reason": "Someone can hack your system. Read this: https://book.hacktricks.xyz/pentesting/6379-pentesting-redis",
+          "level": "critical"
+        },
+        "condition": "eq"
+      }
+    ],
+    "rename-command": [
+      {
+        "index": 0,
+        "value": "",
+        "info": {
+          "advice": "Use ACLs to remove commands from the default user, and put them only in some admin user you create for administrative purposes.",
+          "reason": "DEPRECATED",
+          "level": "warning"
+        },
+        "condition": "eq"
+      }
+    ],
+    "maxclients": [
+      {
+        "index": 0,
+        "value": "10",
+        "info": {
+          "advice": "Check your system and set the appropriate value",
+          "reason": "Once the limit is reached Redis will close all the new connections sending an error 'max number of clients reached'.",
+          "level": "warning"
+        },
+        "condition": "lt"
+      }
+    ],
+    "appendonly": [
+      {
+        "index": 0,
+        "value": "no",
+        "info": {
+          "advice": "Read this page and make decision: https://redis.io/topics/persistence",
+          "reason": "Persistence disabled. Your data just exists as long as the server is running",
+          "level": "warning"
+        },
+        "condition": "eq"
+      }
+    ],
+    "lua-time-limit": [
+      {
+        "index": 0,
+        "value": "1",
+        "required": true,
+        "info": {
+          "advice": "Set time limit in accordance to your application",
+          "reason": "Unlimited lua scripts execution without warnings.",
+          "level": "critical"
+        },
+        "condition": "lt"
+      }
+    ],
+    "slowlog-log-slower-than": [
+      {
+        "index": 0,
+        "value": "0",
+        "required": true,
+        "info": {
+          "advice": "Configure the slow log parameters. You can try default value: 10000",
+          "reason": "Logging of every command",
+          "level": "critical"
+        },
+        "condition": "eq"
+      },
+      {
+        "index": 0,
+        "value": "0",
+        "info": {
+          "advice": "Configure the slow log parameters. You can try default value: 10000",
+          "reason": "Command logging disabled",
+          "level": "warning"
+        },
+        "condition": "lt"
+      }
+    ]
+  }
+}
