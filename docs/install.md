@@ -3,6 +3,7 @@
 ## Requirements
 * [Golang](https://golang.org/dl/)
 
+## Installing
 If requirements are installed, do the following command
 ```shell
 $ go get -u github.com/lartie/insecticide/...
