@@ -1,3 +1,3 @@
-module github.com/lartie/insecticide
+module github.com/city-mobil/insecticide
 
 go 1.16

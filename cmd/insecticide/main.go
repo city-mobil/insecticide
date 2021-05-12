@@ -6,9 +6,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/lartie/insecticide/internal/analyzer"
-	"github.com/lartie/insecticide/internal/rconf"
-	"github.com/lartie/insecticide/internal/rules"
+	"github.com/city-mobil/insecticide/internal/analyzer"
+	"github.com/city-mobil/insecticide/internal/rconf"
+	"github.com/city-mobil/insecticide/internal/rules"
 )
 
 var (

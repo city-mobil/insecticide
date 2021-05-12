@@ -1,8 +1,8 @@
 package analyzer
 
 import (
-	"github.com/lartie/insecticide/internal/rconf"
-	"github.com/lartie/insecticide/internal/rules"
+	"github.com/city-mobil/insecticide/internal/rconf"
+	"github.com/city-mobil/insecticide/internal/rules"
 )
 
 func MapConfigAndRules(conf rconf.RedisConf, params rules.Parameters) Data {

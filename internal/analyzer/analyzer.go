@@ -3,7 +3,7 @@ package analyzer
 import (
 	"fmt"
 
-	"github.com/lartie/insecticide/internal/rules"
+	"github.com/city-mobil/insecticide/internal/rules"
 )
 
 type Param struct {
