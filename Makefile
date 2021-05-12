@@ -5,7 +5,7 @@ APP:=insecticide
 all: build
 
 .PHONY: build
-build: clean tidy ## Build application
+build: clean ## Build application
 	go generate ./...
 	CGO_ENABLED=0 go build -o bin/${APP} cmd/${APP}/main.go
 
