@@ -1,6 +1,6 @@
 # Insecticide
 
-Insecticide is a tool suite for [Redis](https://redis.io/) profiling. It finds ambiguous values in your redis configuration.
+Insecticide is a tool suite for [Redis](https://redis.io/) configuration profiling. It finds ambiguous values in your redis configuration.
 
 > NOTE: This is non-stable alpha version
 
